@@ -15,10 +15,10 @@ html, body{
 
 #page1{
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-color: #EFEAE3;
-    padding: 3vw;
+    padding: 0 3vw;
 }
 
 nav{
@@ -26,6 +26,7 @@ nav{
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    padding: 3vw 0;
 }
 
 nav img{
@@ -79,7 +80,7 @@ nav h4:hover a{
 
 #center{
     width: 100%;
-    height: 70vh;
+    height: 65vh;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -88,14 +89,74 @@ nav h4:hover a{
 }
 
 #center p {
-    width: 70%;
+    width: 28vw;
     font-weight: 600;
     font-size: 2vw;
+    line-height: 1.2;
 }
 
 #center h1{
-    font-size: 9.5vw;
+    width: 40vw;
+    font-size: 10vw;
     text-align: end;
     font-weight: 600;
     line-height: .8;
+}
+
+#hero-shape{
+    width: 46vw;
+    height: 36vw;
+    top: 70vh;
+    position: absolute;
+    right: 0;
+
+}
+#hero-1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: orangered;
+    filter: blur(20px);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+#hero-2{
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    background-color: orangered;
+    filter: blur(20px);
+    border-radius: 50%;
+}
+#hero-3{
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    background-color: orangered;
+    filter: blur(20px);
+    border-radius: 50%;
+    animation: anime;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#page1 video{
+    margin-top: 5vw;
+    width: 100%;
+    border-radius: 2vw;
+}
+
+#page2{
+    height: 100vh;
+    width: 100%;
+}
+
+@keyframes anime {
+    from{
+        transform: translate(-15%,10%);
+    }
+    to{
+        transform: translate(10%,-16%);
+    }
 }
