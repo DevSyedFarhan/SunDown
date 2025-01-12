@@ -106,7 +106,7 @@ nav h4:hover a{
 #hero-shape{
     width: 46vw;
     height: 36vw;
-    top: 70vh;
+    top: 68vh;
     position: absolute;
     right: 0;
 
@@ -116,7 +116,7 @@ nav h4:hover a{
     height: 100%;
     width: 100%;
     background-color: orangered;
-    filter: blur(20px);
+    filter: blur(15px);
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
 }
@@ -124,16 +124,22 @@ nav h4:hover a{
     position: absolute;
     height: 30vw;
     width: 30vw;
-    background-color: orangered;
-    filter: blur(20px);
+    background: linear-gradient(orangered, rgb(255, 91, 31));
+    filter: blur(25px);
     border-radius: 50%;
+    animation: anime2;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
+
 #hero-3{
     position: absolute;
     height: 30vw;
     width: 30vw;
-    background-color: orangered;
-    filter: blur(20px);
+    background: linear-gradient(orangered, rgb(255, 91, 31));
+    filter: blur(25px);
     border-radius: 50%;
     animation: anime;
     animation-timing-function: ease;
@@ -145,6 +151,7 @@ nav h4:hover a{
     margin-top: 5vw;
     width: 100%;
     border-radius: 2vw;
+    position: relative;
 }
 
 #page2{
@@ -154,9 +161,18 @@ nav h4:hover a{
 
 @keyframes anime {
     from{
-        transform: translate(-15%,10%);
+        transform: translate(55%,-10%);
     }
     to{
-        transform: translate(10%,-16%);
+        transform: translate(0%,10%);
+    }
+}
+
+@keyframes anime2 {
+    from{
+        transform: translate(5%,-5%);
+    }
+    to{
+        transform: translate(-20%,20%);
     }
 }
