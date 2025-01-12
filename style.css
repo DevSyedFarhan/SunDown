@@ -152,6 +152,7 @@ nav h4:hover a{
     width: 100%;
     border-radius: 2vw;
     position: relative;
+    scale: .8;
 }
 
 #page2{
