@@ -11,13 +11,13 @@
 html, body{
     width: 100%;
     height: 100%;
+    background-color: #faf9f9;
 }
 
 #page1{
     position: relative;
     min-height: 100vh;
     width: 100vw;
-    background-color: #EFEAE3;
     padding: 0 3vw;
 }
 
@@ -75,7 +75,7 @@ nav h4:hover::after{
 }
 
 nav h4:hover a{
-    color: #EFEAE3;
+    color: #faf9f9;
 }
 
 #center{
@@ -85,7 +85,7 @@ nav h4:hover a{
     align-items: flex-end;
     justify-content: space-between;
     border-bottom: 1px solid rgba(0, 0, 0, 0.397);
-    padding-bottom: 5vw;
+    padding-bottom: 7vw;
 }
 
 #center p {
@@ -115,7 +115,7 @@ nav h4:hover a{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: orangered;
+    background: linear-gradient(to top, #FE330A, #fe630a);
     filter: blur(15px);
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
@@ -124,7 +124,7 @@ nav h4:hover a{
     position: absolute;
     height: 30vw;
     width: 30vw;
-    background: linear-gradient(orangered, rgb(255, 91, 31));
+    background: linear-gradient(to top, #FE330A, #fe630a);
     filter: blur(25px);
     border-radius: 50%;
     animation: anime2;
@@ -138,7 +138,7 @@ nav h4:hover a{
     position: absolute;
     height: 30vw;
     width: 30vw;
-    background: linear-gradient(orangered, rgb(255, 91, 31));
+    background: linear-gradient(to top right, #FE330A, #fe630a);
     filter: blur(25px);
     border-radius: 50%;
     animation: anime;
@@ -152,28 +152,128 @@ nav h4:hover a{
     width: 100%;
     border-radius: 2vw;
     position: relative;
-    scale: .8;
 }
 
 #page2{
-    height: 100vh;
+    position: relative;
+    min-height: 100vh;
     width: 100%;
+    padding: 8vw 0;
+}
+
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.circle{
+    height: 4vw;
+    width: 4vw;
+    background-color: #FE330A;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1vw 3vw;
+}
+
+#moving-text h1{
+    display: inline-block;
+    font-size: 9vw;
+}
+
+#p2-btm{
+    height: 80vh;
+    width: 100%;
+    justify-content: space-between;
+    padding: 6vw;
+    display: flex;
+    align-items: center;
+}
+
+#p2-btm h2{
+    font-size: 4vw;
+    font-weight: 600;
+    line-height: 1;
+    width: 60%;
+    z-index: 1;
+}
+
+#p2-btm-2{
+    margin-top: 25vw;
+    width: 23%; 
+    z-index: 1;
+}
+
+#p2-btm-2 img{
+    width: 100%;
+    margin-bottom: 2vw;
+    border-radius: 1vw;
+}
+
+#animcircle{
+    width: 32vw;
+    height: 32vw;
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient( to top, #FE330A, #fe630a);
+    filter: blur(20px);
+    top: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    animation: circleanim;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#page3{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+@keyframes circleanim {
+    from{
+        transform: translate(10%, -10%) skew(0deg);
+    }
+    to{
+        transform: translate(-10%, 10%) skew(-6deg);
+    }
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
 }
 
 @keyframes anime {
     from{
-        transform: translate(55%,-10%);
+        transform: translate(45%,-10%);
     }
     to{
-        transform: translate(0%,10%);
+        transform: translate(-5%,10%);
     }
 }
 
 @keyframes anime2 {
     from{
-        transform: translate(5%,-5%);
+        transform: translate(10%,-10%);
     }
     to{
-        transform: translate(-20%,20%);
+        transform: translate(-10%,10%);
     }
 }
