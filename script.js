@@ -20,3 +20,25 @@ elems.forEach(function(e){
         fixed.style.backgroundImage = `url(${image})`
     })
 })
+
+let rbox = document.querySelector("#box #right");
+let h1 = document.querySelectorAll("#text .he");
+
+h1.forEach(function(h){
+    h.addEventListener("click", function(){
+        h1.forEach(function(element){
+            element.style.opacity = "0.5";
+        })
+
+        this.style.opacity = 1;
+        
+        let image = h.getAttribute("data-image");
+        rbox.style.backgroundImage = `url(${image})`
+    })
+})
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 30,
+});
