@@ -318,7 +318,6 @@ nav h4:hover a{
     z-index: 99;
     position: fixed;
     transition: all 0.4s ease;
-    background-color: red;
     opacity: 0;
     pointer-events: none;
     background-position: center;
@@ -607,4 +606,8 @@ nav h4:hover a{
     to{
         transform: translate(-10%,10%);
     }
+}
+
+@media screen {
+    
 }
