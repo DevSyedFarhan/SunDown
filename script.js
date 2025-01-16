@@ -82,5 +82,5 @@ menuanime();
 
 let loader = document.querySelector("#loader")
 setTimeout(function(){
-    loader.style.top = "-100%";
+    loader.style.top = "-150%";
 }, 3000)
