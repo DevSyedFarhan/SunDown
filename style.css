@@ -36,7 +36,6 @@ nav{
     position: relative;
     z-index: 100;
     transition: all 0.8s ease;
-    background-color: #faf9f9;
 }
 nav #menu{
     display: none;
