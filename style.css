@@ -23,7 +23,7 @@ html, body{
     position: relative;
     min-height: 100vh;
     width: 100vw;
-    padding: 0 3vw;
+    padding: 0 0;
     background-color: #faf9f9;
 }
 
@@ -32,7 +32,14 @@ nav{
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    padding: 3vw 0;
+    padding: 3vw 5vw;
+    position: relative;
+    z-index: 100;
+    transition: all 0.8s ease;
+    background-color: #faf9f9;
+}
+nav h3{
+    display: none;
 }
 
 nav img{
@@ -567,9 +574,36 @@ nav h4:hover a{
     font-size: 1vw;
 }
 
+#full-scr{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000004f;
+    position: fixed;
+    z-index: 99;
+    pointer-events: none;
+    top: -100%;
+    transition: all 0.5s ease;
+}
 
+#fulldiv1{
+    height: 50%;
+    background-color: #faf9f9;
+    width: 100%;
+    border-radius: 0 0 5vw 5vw;
+    padding-top: 35vw;
+    padding-right: 5vw;
+    line-height: 1;
+}
 
-
+#fulldiv1 h1{
+    font-weight: 600;
+    font-size: 15vw;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
 
 
 @keyframes circleanim {
@@ -592,22 +626,58 @@ nav h4:hover a{
 
 @keyframes anime {
     from{
-        transform: translate(45%,-10%);
+        transform: translate(35%,-10%) skew(12deg);
     }
     to{
-        transform: translate(-5%,10%);
+        transform: translate(-10%,35%);
     }
 }
 
 @keyframes anime2 {
     from{
-        transform: translate(10%,-10%);
+        transform: translate(10%,-10%)skew(12deg);
     }
     to{
         transform: translate(-10%,10%);
     }
 }
 
-@media screen {
+@media (max-width:600px) {
     
+#page1{
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 0 0vw;
+}
+
+nav{
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    padding: 5vw 3vw;
+    background-color: #faf9f9;
+}
+
+nav img{
+    width: 25%;
+    transition: all 0.3s ease;
+}
+
+#links{
+    display: flex;
+    gap: 1vw;
+    display: none;
+}
+
+nav h3{
+    font-weight: 500;
+    padding: 2vw 5vw;
+    border: 1px solid rgba(0, 0, 0, 0.288);
+    border-radius: 50px;
+    font-size: 4vw;
+    display: inline-block;
+    padding-left: 10vw;
+}
+
 }

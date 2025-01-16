@@ -42,3 +42,21 @@ var swiper = new Swiper(".mySwiper", {
     centeredSlides: true,
     spaceBetween: 30,
 });
+
+let flag = 0;
+
+let menu = document.querySelector("nav h3");
+let fullScr = document.querySelector("#full-scr");
+let navImg = document.querySelector("nav img");
+
+menu.addEventListener("click",function(){
+    if(flag === 0){
+        fullScr.style.top  = "0%";
+        navImg.style.opacity = 0;
+        flag = 1;
+    }else{
+        fullScr.style.top  = "-100%";
+        navImg.style.opacity = 1;
+        flag = 0;
+    }
+})
