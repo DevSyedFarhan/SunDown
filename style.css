@@ -23,7 +23,7 @@ html, body{
     position: relative;
     min-height: 100vh;
     width: 100vw;
-    padding: 0 0;
+    padding: 0 3vw;
     background-color: #faf9f9;
 }
 
@@ -32,13 +32,13 @@ nav{
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    padding: 3vw 5vw;
+    padding: 3vw 0vw;
     position: relative;
     z-index: 100;
     transition: all 0.8s ease;
     background-color: #faf9f9;
 }
-nav h3{
+nav #menu{
     display: none;
 }
 
@@ -92,6 +92,7 @@ nav h4:hover a{
 }
 
 #center{
+    
     width: 100%;
     height: 65vh;
     display: flex;
@@ -448,7 +449,7 @@ nav h4:hover a{
 
 #page5{
     width: 100%;
-    min-height: 60vh;
+    min-height: 50vh;
     position: relative;
     background-color: #faf9f9;
 }
@@ -605,6 +606,61 @@ nav h4:hover a{
     
 }
 
+#loader{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 100;
+    position: fixed;
+    transition: all 0.6s linear;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    position: absolute;
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right, #FF9831, #fe630a);
+    -webkit-background-clip: text;
+    opacity: 0;
+}
+
+#loader h1:nth-child(1){
+    animation: load;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+#loader h1:nth-child(2){
+    animation: load;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+
+#loader h1:nth-child(3){
+    animation: load;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    0%{
+        opacity: 0;
+    }
+}
 
 @keyframes circleanim {
     from{
@@ -642,7 +698,7 @@ nav h4:hover a{
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:750px) {
     
 #page1{
     position: relative;
@@ -670,14 +726,242 @@ nav img{
     display: none;
 }
 
+nav #menu{
+    display: inline-block;
+}
 nav h3{
     font-weight: 500;
     padding: 2vw 5vw;
+    display: flex ;
+    gap: 3vw;
     border: 1px solid rgba(0, 0, 0, 0.288);
     border-radius: 50px;
     font-size: 4vw;
+    
+}
+
+#center{
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.397);
+    padding: 5vw;
+    flex-direction: column-reverse;
+    position: relative;
+}
+
+#center p {
+    width: 100%;
+    font-weight: 600;
+    font-size: 5vw;
+    line-height: 1.2;
+    padding-bottom: 10vw;
+}
+
+#center h1{
+    width: 100vw;
+    font-size: 20vw;
+    text-align: end;
+    font-weight: 600;
+    line-height: .8;
+    margin-top: 10vw;
+}
+
+#hero-shape{
+    width: 46vw;
+    height: 36vw;
+    top: 68vh;
+    position: absolute;
+    right: 0;
+
+}
+
+#hero-1{
+    filter: blur(10px);
+}
+
+#hero-2{
+    filter: blur(15px);
+}
+
+#hero-3{
+    filter: blur(15px);
+}
+
+
+#p2-btm{
+    height: 100vh;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#p2-btm h2{
+    padding-top: 15vw;
+    font-size: 6vw;
+    width: 100%;
+
+}
+
+#p2-btm-2{
+    margin-top: 25vw;
+    width: 100%; 
+    z-index: 1;
+}
+
+#animcircle{
+    filter: blur(20px);
+    top: 30%;
+    left: 35%;
+    animation-duration: 3s;
+}
+
+#page3>h4{
+    margin-left: 2vw;
+    gap: 1vw;
+    font-size: 3vw;
+}
+
+
+#page3>h4 span img{
+    width: 1.5vw;
+}
+
+
+.elem{
+    height: 13vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    padding: 0 2vw;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.418);
+    overflow: hidden;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.elem h3{
+    font-size: 5vw;
+}
+
+.r-text h6{
+    font-size: 3vw;
+}
+.r-text p{
+    font-size: 3vw;
+}
+
+
+#page3>h6{
+    margin: 3vw;
+    color: #000000cc;
+    font-size: 3vw;
+    padding: 2vw 5vw;
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    border-radius: 50px;
+    position: relative;
     display: inline-block;
-    padding-left: 10vw;
+    transition: all ease 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+#page4{
+    min-height: 70vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #faf9f9;
+}
+
+#page4 #box{
+    width: 95%;
+    height: 60vh;
+}
+
+#box #left{
+    width: 40%;
+    height: 100%;
+}
+
+#left #text{
+    padding: 5vw;
+}
+
+#left #text h1{
+    padding-left: 0vw;
+    font-size: 6vw;
+}
+
+#left #text p{
+    font-size: 2.5vw;
+}
+
+
+#page5>h6{
+    font-size: 3.5vw;
+    padding: 3.5vw;
+}
+
+#page5>h6 span img{
+    width: 1.8vw;
+    margin-right: .4vw;
+}
+
+.swiper {
+    margin-top: 8vw;
+}
+
+.swiper-slide {
+    width: 40vw;
+    height: 25vh;
+    font-size: 3vw;
+    padding: 2vw;
+}
+
+#footer-btm{
+    height: 40vh;
+}
+
+#footer-btm #txt{
+    font-size: 3vw;
+}
+
+#txt-top h2{
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+#txt-top p{
+    font-size: 4vw;
+    margin-bottom: 2vw;
+}
+
+#txt-2 input {
+    width: 50vw;
+    padding: 2vw 4vw;
+    font-size: 4vw;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#txt-2 input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#txt-2 input:focus {
+    background-color: rgba(255, 255, 255, 0.541);
 }
 
 }

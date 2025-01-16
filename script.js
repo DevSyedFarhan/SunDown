@@ -3,7 +3,8 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-let container = document.querySelector("#elem-container");
+function fixedimage(){
+    let container = document.querySelector("#elem-container");
 let fixed = document.querySelector("#fixed-image");
 
 container.addEventListener("mouseenter", function(){
@@ -21,7 +22,11 @@ elems.forEach(function(e){
     })
 })
 
-let rbox = document.querySelector("#box #right");
+}
+
+
+function rightbox(){
+    let rbox = document.querySelector("#box #right");
 let h1 = document.querySelectorAll("#text .he");
 
 h1.forEach(function(h){
@@ -37,13 +42,20 @@ h1.forEach(function(h){
     })
 })
 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    centeredSlides: true,
-    spaceBetween: 30,
-});
+}
 
-let flag = 0;
+
+function swiper(){
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 30,
+    });
+}
+
+
+function menuanime(){
+    let flag = 0;
 
 let menu = document.querySelector("nav h3");
 let fullScr = document.querySelector("#full-scr");
@@ -60,3 +72,15 @@ menu.addEventListener("click",function(){
         flag = 0;
     }
 })
+}
+
+
+fixedimage();
+swiper()
+rightbox();
+menuanime();
+
+let loader = document.querySelector("#loader")
+setTimeout(function(){
+    loader.style.top = "-100%";
+}, 3000)
