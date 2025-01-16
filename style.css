@@ -718,6 +718,9 @@ nav img{
     width: 25%;
     transition: all 0.3s ease;
 }
+#page1 video{
+    padding: 0 2vw;
+}
 
 #links{
     display: flex;
